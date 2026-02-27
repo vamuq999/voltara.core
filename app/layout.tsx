@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span className="brandTag">VoltaraLabs City</span>
           </a>
 
-          <nav className="nav">
+          <nav className="nav" aria-label="District navigation">
             {NAV.map((item) => (
               <a key={item.href} className="navLink" href={item.href}>
                 {item.label}
