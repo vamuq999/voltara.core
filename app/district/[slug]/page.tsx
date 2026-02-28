@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import DistrictShell from "../../../components/DistrictShell";
-import { getDistrict } from "../../../lib/districts";
+import DistrictShell from "../../../../components/DistrictShell";
+import { getDistrict } from "../../../../lib/districts";
 
 export default function DistrictPage({
   params,
