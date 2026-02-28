@@ -1,94 +1,52 @@
-// app/page.tsx
-const DISTRICTS = [
-  {
-    href: "/oracle",
-    title: "VoltaraOracle",
-    desc: "Signals, insights, and the temple of decision-making.",
-    pill: "Core Intelligence",
-  },
-  {
-    href: "/bullfinder",
-    title: "Bullfinder",
-    desc: "Scan the market. Catch momentum. Strike clean.",
-    pill: "Market Radar",
-  },
-  {
-    href: "/gaiagauge",
-    title: "GaiaGauge",
-    desc: "Stability, clarity, and grounding metrics — the calm engine.",
-    pill: "Balance Layer",
-  },
-  {
-    href: "/reflex",
-    title: "VoltaraReflex",
-    desc: "Fast reflections, sharp loops, and adaptive thinking.",
-    pill: "Feedback Loop",
-  },
-  {
-    href: "/mint",
-    title: "VoltaraMint",
-    desc: "Forge artifacts. Mint proof. Ship visuals with purpose.",
-    pill: "Forge District",
-  },
-  {
-    href: "/sanctuary",
-    title: "SanctuarySprintV3",
-    desc: "Discipline + flow. Small steps, big outcomes.",
-    pill: "Sanctuary",
-  },
-  {
-    href: "/creatordrop",
-    title: "CreatorDrop",
-    desc: "Drop culture. Publish work. Build the creator economy lane.",
-    pill: "Marketplace",
-  },
-];
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <div>
-      <section className="cityHero">
-        <div className="cityInner">
-          <h1 className="h1">VoltaraCore</h1>
-          <p className="sub">
-            One city. Many districts. Built for shipping — not stumbling. Pick a portal below and
-            move like a founder with a map.
-          </p>
+    <main className="relative min-h-screen px-6 py-12">
+      <div className="v-grid" />
+      <div className="v-shimmer" />
 
-          <div className="kpiRow">
-            <div className="kpi">
-              <strong>7</strong> districts online
-            </div>
-            <div className="kpi">
-              <strong>1</strong> design system
-            </div>
-            <div className="kpi">
-              <strong>0</strong> dark-mode toggles
-            </div>
-            <div className="kpi">
-              <strong>∞</strong> momentum
-            </div>
+      <div className="relative max-w-5xl mx-auto">
+        <header className="flex items-center justify-between mb-10">
+          <div>
+            <h1 className="text-3xl font-semibold tracking-tight">
+              VoltaraCore
+            </h1>
+            <p className="text-sm v-muted">
+              Ecosystem Hub • Build → Finish → Park → Clone
+            </p>
           </div>
-        </div>
-      </section>
 
-      <section className="cards" aria-label="District portals">
-        {DISTRICTS.map((d) => (
-          <div key={d.href} className="card">
-            <div className="cardInner">
-              <h2 className="cardTitle">{d.title}</h2>
-              <p className="cardDesc">{d.desc}</p>
+          <a
+            href="mailto:voltaralabs@gmail.com"
+            className="v-btn text-sm"
+          >
+            Contact
+          </a>
+        </header>
 
-              <div className="cardMeta">
-                <span className="pill">{d.pill}</span>
-                <a className="go" href={d.href}>
-                  Enter →
-                </a>
-              </div>
-            </div>
+        <section className="grid gap-6 sm:grid-cols-2">
+          <a href="/oracle" className="v-card p-6 block">
+            <h2 className="text-xl font-semibold mb-2">
+              VoltaraOracle
+            </h2>
+            <p className="v-muted text-sm">
+              Strategic intelligence. Signals. Clarity.
+            </p>
+          </a>
+
+          <div className="v-card p-6 opacity-70">
+            <h2 className="text-xl font-semibold mb-2">
+              More Districts Loading
+            </h2>
+            <p className="v-muted text-sm">
+              Bullfinder • GaiaGauge • Reflex • Mint • Sanctuary • CreatorDrop
+            </p>
           </div>
-        ))}
-      </section>
-    </div>
+        </section>
+
+        <footer className="mt-16 text-xs v-muted">
+          © 2026 VoltaraCore
+        </footer>
+      </div>
+    </main>
   );
 }
